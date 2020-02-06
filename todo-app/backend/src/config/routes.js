@@ -1,8 +1,7 @@
 const express = require('express')
 
 module.exports = function (server) {
- 
-    
+     
     //API ROUTES
     const router = express.Router()
     server.use('/api', router)
@@ -10,6 +9,6 @@ module.exports = function (server) {
 
     //TODO ROUTERS
     const todoService = require('../api/todo/todoService')
-    todoService.register(router, 'todos')
+    todoService.register(router, '/todos')
 
 }
